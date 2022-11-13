@@ -223,6 +223,7 @@
           null,
           1,
           1,
+          1,
           null,
           null,
           null
@@ -250,29 +251,34 @@
           1,
           null,
           1,
-          2,
-          2,
-          2,
+          1,
+          1,
+          1,
           null,
-          2,
+          1,
           null,
           null,
           1,
           null,
           1,
-          2,
+          1,
           null,
           null,
           1,
-          2,
-          2,
-          2,
+          1,
+          1,
+          1,
           null,
           null,
           null
         ]
+      },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/app/serializers/recipe_serializer.rb": {
+        "lines": [
+
+        ]
       }
     },
-    "timestamp": 1668311036
+    "timestamp": 1668311717
   }
 }
