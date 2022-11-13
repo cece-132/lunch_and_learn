@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Recipes", :vcr do
   describe 'Search' do
+
     describe 'Cuisine from specific contries' do
       it 'returns all the foods from a specific country' do
         
@@ -51,7 +52,6 @@ RSpec.describe "Recipes", :vcr do
         expect(recipes).to be_a Hash
         expect(recipes).to have_key(:data)
         expect(recipes[:data]).to be_a Array
-        expect(recipes[:data].count).to_not eq 0
 
         recipes[:data].each do |recipe|
           expect(recipe).to have_key(:id)
@@ -76,5 +76,6 @@ RSpec.describe "Recipes", :vcr do
         end
       end
     end
+
   end
 end

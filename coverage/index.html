@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-11-13T15:23:33-07:00">2022-11-13T15:23:33-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-11-13T15:35:27-07:00">2022-11-13T15:35:27-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  95.6%
+  93.68%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.84
+         1.64
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>20</b> files in total.
+    <b>21</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>91</b> relevant lines,
-    <span class="green"><b>87</b> lines covered</span> and
-    <span class="red"><b>4</b> lines missed. </span>
+    <b>95</b> relevant lines,
+    <span class="green"><b>89</b> lines covered</span> and
+    <span class="red"><b>6</b> lines missed. </span>
     (<span class="green">
-  95.6%
+  93.68%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#43ba7ca59cdc390369343893173bdef3d026a7f6" class="src_link" title="app/controllers/api/v1/recipes_controller.rb">app/controllers/api/v1/recipes_controller.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">15</td>
+            <td class="yellow strong cell--number t-file__coverage">90.00 %</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">10</td>
             <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.11</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -110,7 +110,7 @@
             <td class="cell--number">5</td>
             <td class="cell--number">5</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.60</td>
+            <td class="cell--number">3.20</td>
             
           </tr>
         
@@ -132,7 +132,7 @@
             <td class="cell--number">7</td>
             <td class="cell--number">7</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">7.29</td>
+            <td class="cell--number">6.14</td>
             
           </tr>
         
@@ -143,7 +143,7 @@
             <td class="cell--number">4</td>
             <td class="cell--number">4</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">4.00</td>
+            <td class="cell--number">3.25</td>
             
           </tr>
         
@@ -236,6 +236,17 @@
           </tr>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#e8e1215b462a2f3b17fd975abb3a65d53b08ad8b" class="src_link" title="config/initializers/country_regions.rb">config/initializers/country_regions.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">66.67 %</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">2</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0.67</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#870368ec929c6268d13f8fb60ffa2a7a4979e5dd" class="src_link" title="config/initializers/filter_parameter_logging.rb">config/initializers/filter_parameter_logging.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">4</td>
@@ -311,8 +322,8 @@
   <div class="header">
     <h3>app/controllers/api/v1/recipes_controller.rb</h3>
     <h4>
-      <span class="green">
-  100.0%
+      <span class="yellow">
+  90.0%
 </span>
 
       lines covered
@@ -321,9 +332,9 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
+      <b>10</b> relevant lines.
       <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
 
     
@@ -406,7 +417,7 @@
 
             
 
-            <code class="ruby">      country = CountryFacade.random_country while recipes.empty?</code>
+            <code class="ruby">        if recipes.empty?</code>
           </li>
         </div>
       
@@ -417,7 +428,7 @@
 
             
 
-            <code class="ruby">      render json: RecipeSerializer.format_recipes(recipes)</code>
+            <code class="ruby">          render json: { data: [] }</code>
           </li>
         </div>
       
@@ -428,29 +439,29 @@
 
             
 
-            <code class="ruby">    else</code>
+            <code class="ruby">        else</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            <span class="hits">1</span>
+          <li class="missed" data-hits="0" data-linenumber="10">
+            
             
 
             
 
-            <code class="ruby">      recipes = RecipeFacade.search_countries(params[:country])</code>
+            <code class="ruby">          render json: RecipeSerializer.format_recipes(recipes)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="11">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="11">
+            
             
 
             
 
-            <code class="ruby">      render json: RecipeSerializer.format_recipes(recipes)</code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
@@ -461,12 +472,45 @@
 
             
 
+            <code class="ruby">    else</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      recipes = RecipeFacade.search_countries(params[:country])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      render json: RecipeSerializer.format_recipes(recipes)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
             <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -477,7 +521,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -488,7 +532,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
@@ -834,8 +878,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="6">
-            <span class="hits">12</span>
+          <li class="covered" data-hits="10" data-linenumber="6">
+            <span class="hits">10</span>
             
 
             
@@ -1105,8 +1149,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="8">
-            <span class="hits">12</span>
+          <li class="covered" data-hits="10" data-linenumber="8">
+            <span class="hits">10</span>
             
 
             
@@ -1116,8 +1160,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="9">
-            <span class="hits">12</span>
+          <li class="covered" data-hits="10" data-linenumber="9">
+            <span class="hits">10</span>
             
 
             
@@ -1127,8 +1171,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="10">
-            <span class="hits">12</span>
+          <li class="covered" data-hits="10" data-linenumber="10">
+            <span class="hits">10</span>
             
 
             
@@ -1138,8 +1182,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="11">
-            <span class="hits">12</span>
+          <li class="covered" data-hits="10" data-linenumber="11">
+            <span class="hits">10</span>
             
 
             
@@ -1246,8 +1290,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="5">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
             
 
             
@@ -1268,8 +1312,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="7">
-            <span class="hits">12</span>
+          <li class="covered" data-hits="10" data-linenumber="7">
+            <span class="hits">10</span>
             
 
             
@@ -3250,6 +3294,114 @@
             
 
             <code class="ruby"># end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="e8e1215b462a2f3b17fd975abb3a65d53b08ad8b">
+  <div class="header">
+    <h3>config/initializers/country_regions.rb</h3>
+    <h4>
+      <span class="red">
+  66.67%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>3</b> relevant lines.
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class CountryRegions</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def regions</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">    [&quot;Africa&quot;, &quot;Americas&quot;, &quot;Asia&quot;, &quot;Europe&quot;, &quot;Oceania&quot;]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
           </li>
         </div>
       

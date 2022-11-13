@@ -4,8 +4,11 @@ class Api::V1::RecipesController < ApplicationController
     if params[:country].nil?
       country = CountryFacade.random_country
       recipes = RecipeFacade.search_countries(country)
-      country = CountryFacade.random_country while recipes.empty?
-      render json: RecipeSerializer.format_recipes(recipes)
+        if recipes.empty?
+          render json: { data: [] }
+        else
+          render json: RecipeSerializer.format_recipes(recipes)
+        end
     else
       recipes = RecipeFacade.search_countries(params[:country])
       render json: RecipeSerializer.format_recipes(recipes)
