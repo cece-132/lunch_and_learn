@@ -1,8 +1,9 @@
 class EdamamService
 
   def self.search_countries(country)
-    response = conn.get("/search/")
+    response = conn.get("/recipes/v2?type=public&app_id=")
     "/recipes/v2?type=public&app_id=be38002a&app_key=9bff66efd5d2b993eec5f3e18e491c31&cuisineType=French"
+    parse(response.body)
   end
   
   private
