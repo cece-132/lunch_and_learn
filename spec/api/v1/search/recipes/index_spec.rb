@@ -9,11 +9,12 @@ RSpec.describe "Recipes", :vcr do
 
         expect(response).to be_successful
 
-        recipes = JSON.parse(response.body, symbolize_names: true)
+        recipes = EdamamService.search_countries("french")
 
         expect(recipes).to be_a Hash
         expect(recipes).to have_key(:data)
         expect(recipes[:data]).to be_a Array
+        expect(recipes[:data].count).to eq 10
 
         recipes[:data].each do |recipe|
           expect(recipe).to have_key(:id)
