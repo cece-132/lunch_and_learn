@@ -53,6 +53,10 @@ RSpec.describe "Recipes", :vcr do
         expect(recipes).to have_key(:data)
         expect(recipes[:data]).to be_a Array
 
+        if recipes[:data].empty?
+          expect(recipes[:data]).to be_a Array
+        end
+
         recipes[:data].each do |recipe|
           expect(recipe).to have_key(:id)
           expect(recipe[:id]).to eq(nil)

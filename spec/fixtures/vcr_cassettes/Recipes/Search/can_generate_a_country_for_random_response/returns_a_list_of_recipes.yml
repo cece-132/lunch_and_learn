@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.edamam.com/search?app_id=be38002a&app_key=9bff66efd5d2b993eec5f3e18e491c31&count=10&q=Republic%20of%20Tajikistan
+    uri: https://api.edamam.com/search?app_id=be38002a&app_key=9bff66efd5d2b993eec5f3e18e491c31&count=10&q=Democratic%20People%27s%20Republic%20of%20Korea
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Sun, 13 Nov 2022 22:35:27 GMT
+      - Sun, 13 Nov 2022 22:38:29 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -39,9 +39,9 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=15552001
       X-Request-Id:
-      - 6847ad9e500f12d8c07497cc45c3c227
+      - d2e2e2322dd57c335b04ec45fecd90db
     body:
       encoding: ASCII-8BIT
-      string: '{"q":"Republic of Tajikistan","from":0,"to":10,"more":false,"count":0,"hits":[]}'
-  recorded_at: Sun, 13 Nov 2022 22:35:27 GMT
+      string: '{"q":"Democratic People''s Republic of Korea","from":0,"to":10,"more":false,"count":0,"hits":[]}'
+  recorded_at: Sun, 13 Nov 2022 22:38:29 GMT
 recorded_with: VCR 6.1.0
