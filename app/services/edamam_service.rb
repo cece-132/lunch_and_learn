@@ -1,8 +1,8 @@
 class EdamamService
 
   def self.search_countries(country)
-    response = conn.get("/recipes/v2?type=public&app_id=")
-    "/recipes/v2?type=public&app_id=be38002a&app_key=9bff66efd5d2b993eec5f3e18e491c31&cuisineType=French"
+    response = conn.get("recipes/v2?cuisineType=#{country}")
+    binding.pry
     parse(response.body)
   end
   
@@ -13,6 +13,10 @@ class EdamamService
   end
 
   def self.conn
-    Faraday.new("http://api.edamam.com/api/")
+    Faraday.new(url: "http://api.edamam.com/api/?type=public") do |faraday|
+      faraday.params["type"] = ENV["type"]
+      faraday.params["app_id"] = ENV['app_id']
+      faraday.params["app_key"] = ENV['app_key']
+    end
   end
 end
