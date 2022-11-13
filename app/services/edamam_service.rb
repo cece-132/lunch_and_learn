@@ -15,7 +15,7 @@ class EdamamService
   end
 
   def self.conn
-    Faraday.new(url: "https://api.edamam.com") do |faraday|
+    Faraday.new(url: "https://api.edamam.com/v2") do |faraday|
       faraday.params["app_id"] = ENV['app_id']
       faraday.params["app_key"] = ENV['app_key']
     end

@@ -5,11 +5,11 @@ RSpec.describe "Recipes", :vcr do
     describe 'Cuisine from specific contries' do
       it 'returns all the foods from a specific country' do
         
-        get "/api/v1/recipes?country=thailand"
+        get "/api/v1/recipes?country=french"
 
         expect(response).to be_successful
 
-        recipes = EdamamService.search_countries("french")
+        recipes = JSON.parse(response.body, symbolize_names: true)
 
         expect(recipes).to be_a Hash
         expect(recipes).to have_key(:data)
