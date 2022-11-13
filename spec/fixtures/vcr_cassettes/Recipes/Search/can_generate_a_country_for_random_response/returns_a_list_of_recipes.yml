@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.edamam.com/search?app_id=be38002a&app_key=9bff66efd5d2b993eec5f3e18e491c31&count=10&q=Democratic%20People%27s%20Republic%20of%20Korea
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Sun, 13 Nov 2022 22:38:29 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - private
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      X-Served-By:
+      - ip-10-0-1-36.ec2.internal/10.0.1.36
+      Vary:
+      - accept-encoding
+      Strict-Transport-Security:
+      - max-age=15552001
+      X-Request-Id:
+      - d2e2e2322dd57c335b04ec45fecd90db
+    body:
+      encoding: ASCII-8BIT
+      string: '{"q":"Democratic People''s Republic of Korea","from":0,"to":10,"more":false,"count":0,"hits":[]}'
+  recorded_at: Sun, 13 Nov 2022 22:38:29 GMT
+recorded_with: VCR 6.1.0
