@@ -5,7 +5,7 @@ RSpec.describe "Recipes", :vcr do
     describe 'Cuisine from specific contries' do
       it 'returns all the foods from a specific country' do
         
-        get "/api/v1/recipes/recipes?country=thailand"
+        get "/api/v1/recipes?country=thailand"
 
         expect(response).to be_successful
 
