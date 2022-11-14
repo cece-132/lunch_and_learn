@@ -34,5 +34,13 @@ RSpec.describe "Final Assessment" do
         expect(sight[:attributes][:place_id]).to be_a String
       end
     end
+
+    it 'can validate if the country is valid' do
+
+      get "/api/v1/tourist_sights?country=Frank"
+      
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+    end
   end
 end

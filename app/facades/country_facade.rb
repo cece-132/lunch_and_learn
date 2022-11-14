@@ -13,6 +13,5 @@ class CountryFacade
 
   def search_country_by_name(country_name)
     country = RestCountryService.search_country_by_name(country_name)
-    binding.pry    
   end
 end
