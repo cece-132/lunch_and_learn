@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :recipes, only: [:index]
+      get "/tourist_sights", to: 'tourist_sights#index'
     end
   end
 end
