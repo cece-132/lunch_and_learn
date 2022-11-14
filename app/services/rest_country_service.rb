@@ -6,6 +6,11 @@ class RestCountryService
     parse(response.body)
   end
 
+  def self.search_country_by_name(country_name)
+    response = conn.get("/v3.1/name/#{country_name}")
+    parse(response.body)
+  end
+
   private
 
   def self.parse(response)

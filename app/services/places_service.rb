@@ -1,5 +1,8 @@
 class PlacesService
 
+  def self.places_service(country)
+  end
+
 
   private
 
@@ -8,7 +11,7 @@ class PlacesService
   end
 
   def self.conn
-    Faraday.new(url: "http://api.geoapify.com/v2") do |faraday|
+    Faraday.new(url: "https://api.geoapify.com/v2") do |faraday|
       faraday.params["apiKey"] = ENV['apiKey']
     end
   end
