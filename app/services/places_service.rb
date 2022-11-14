@@ -1,6 +1,8 @@
 class PlacesService
 
-  def self.places_service(country)
+  def self.find_sights(longitude, latitude)
+    response = conn.get("/v2/places?filter=circle:#{longitude},#{latitude},20000&categories=tourism.sights")
+    parse(response.body)
   end
 
 
