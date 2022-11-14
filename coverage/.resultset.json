@@ -237,7 +237,7 @@
           null,
           null,
           1,
-          1,
+          2,
           null,
           null,
           null,
@@ -259,8 +259,24 @@
           null,
           null
         ]
+      },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/app/controllers/api/v1/tourist_sights_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1668450460
+    "timestamp": 1668451478
   }
 }
