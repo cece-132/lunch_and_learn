@@ -3,8 +3,7 @@ class Country
               :latlng
 
   def initialize(data)
-    binding.pry
     @name = data[:name][:common]
-    @latlng = data[:latlng]
+    @latlng = Geocoder.search(data[:name][:official]).first.coordinates
   end
 end

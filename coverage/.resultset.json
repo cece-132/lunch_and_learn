@@ -169,6 +169,37 @@
           1
         ]
       },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/config/initializers/geocoder.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/config/initializers/inflections.rb": {
         "lines": [
           null,
@@ -388,8 +419,10 @@
           1,
           1,
           null,
+          null,
           1,
           1,
+          0,
           0,
           0,
           null,
@@ -397,6 +430,6 @@
         ]
       }
     },
-    "timestamp": 1668382521
+    "timestamp": 1668383999
   }
 }

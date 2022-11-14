@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-11-13T16:35:21-07:00">2022-11-13T16:35:21-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-11-13T16:59:59-07:00">2022-11-13T16:59:59-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  92.59%
+  91.82%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.45
+         1.44
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>22</b> files in total.
+    <b>23</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>108</b> relevant lines,
-    <span class="green"><b>100</b> lines covered</span> and
-    <span class="red"><b>8</b> lines missed. </span>
+    <b>110</b> relevant lines,
+    <span class="green"><b>101</b> lines covered</span> and
+    <span class="red"><b>9</b> lines missed. </span>
     (<span class="green">
-  92.59%
+  91.82%
 </span>
 )
   </div>
@@ -116,12 +116,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#02cdc2923751326a03c5d47a408f981da072fee2" class="src_link" title="app/poros/country.rb">app/poros/country.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">66.67 %</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">6</td>
+            <td class="red strong cell--number t-file__coverage">57.14 %</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">7</td>
             <td class="cell--number">4</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">0.67</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">0.57</td>
             
           </tr>
         
@@ -261,6 +261,17 @@
             <td class="strong t-file__name"><a href="#870368ec929c6268d13f8fb60ffa2a7a4979e5dd" class="src_link" title="config/initializers/filter_parameter_logging.rb">config/initializers/filter_parameter_logging.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">4</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#251a3116a7b0f57f36456805436659ce5629cdbf" class="src_link" title="config/initializers/geocoder.rb">config/initializers/geocoder.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">27</td>
             <td class="cell--number">1</td>
             <td class="cell--number">1</td>
             <td class="cell--number">0</td>
@@ -942,7 +953,7 @@
     <h3>app/poros/country.rb</h3>
     <h4>
       <span class="red">
-  66.67%
+  57.14%
 </span>
 
       lines covered
@@ -951,9 +962,9 @@
     
 
     <div class="t-line-summary">
-      <b>6</b> relevant lines.
+      <b>7</b> relevant lines.
       <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
 
     
@@ -997,8 +1008,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="4">
+            
             
 
             
@@ -1019,13 +1030,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="6">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    binding.pry</code>
+            
+
+            <code class="ruby">    @name = data[:name][:common]</code>
           </li>
         </div>
       
@@ -1036,23 +1047,12 @@
 
             
 
-            <code class="ruby">    @name = data[:name][:common]</code>
+            <code class="ruby">    @latlng = Geocoder.search(data[:name][:official]).first.coordinates</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">    @latlng = data[:latlng]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="missed" data-hits="0" data-linenumber="8">
             
             
 
@@ -1063,7 +1063,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
+          <li class="missed" data-hits="0" data-linenumber="9">
             
             
 
@@ -3794,6 +3794,334 @@
             
 
             <code class="ruby">Rails.application.config.filter_parameters += [:password]</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="251a3116a7b0f57f36456805436659ce5629cdbf">
+  <div class="header">
+    <h3>config/initializers/geocoder.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>1</b> relevant lines.
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">Geocoder.configure(</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby">  # Geocoding options</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby">  # timeout: 3,                 # geocoding service timeout (secs)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby">  # lookup: :nominatim,         # name of geocoding service (symbol)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby">  # ip_lookup: :ipinfo_io,      # name of IP address geocoding service (symbol)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">  # language: :en,              # ISO-639 language code</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">  # use_https: false,           # use HTTPS for lookup requests? (if supported)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  # http_proxy: nil,            # HTTP proxy server (user:pass@host:port)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">  # https_proxy: nil,           # HTTPS proxy server (user:pass@host:port)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  # api_key: nil,               # API key for geocoding service</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">  # cache: nil,                 # cache object (must respond to #[], #[]=, and #del)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby">  # Exceptions that should not be rescued by default</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">  # (if you want to implement custom error handling);</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby">  # supports SocketError and Timeout::Error</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">  # always_raise: [],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">  # Calculation options</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">  # units: :mi,                 # :km for kilometers or :mi for miles</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">  # distances: :linear          # :spherical or :linear</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">  # Cache configuration</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby">  # cache_options: {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">  #   expiration: 2.days,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+            
+
+            
+
+            <code class="ruby">  #   prefix: &#39;geocoder:&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="26">
+            
+            
+
+            
+
+            <code class="ruby">  # }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">)</code>
           </li>
         </div>
       
