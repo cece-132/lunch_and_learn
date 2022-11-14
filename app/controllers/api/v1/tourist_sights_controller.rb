@@ -1,6 +1,7 @@
 class Api::V1::TouristSightsController < ApplicationController
   def index
-    country_data = PlacesFacade.find_sights(params[:country])
+    sights_array = PlacesFacade.find_sights(params[:country])
+    render json: TouristSightsSerializer.sights(sights_array), status: 200
   end
 end
 

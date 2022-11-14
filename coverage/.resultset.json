@@ -265,6 +265,7 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null
@@ -285,9 +286,9 @@
           1,
           1,
           1,
-          1,
-          1,
+          20,
           null,
+          1,
           null,
           null
         ]
@@ -378,14 +379,19 @@
           null,
           null,
           1,
-          1,
-          1,
-          1,
+          20,
+          20,
+          20,
           null,
           null
         ]
+      },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/app/serializers/tourist_sights_serializer.rb": {
+        "lines": [
+
+        ]
       }
     },
-    "timestamp": 1668455428
+    "timestamp": 1668456341
   }
 }
