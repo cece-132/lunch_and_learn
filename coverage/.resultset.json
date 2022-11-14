@@ -283,6 +283,7 @@
           1,
           1,
           1,
+          1,
           0,
           null,
           null
@@ -319,8 +320,32 @@
           null,
           null
         ]
+      },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/app/poros/country.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1668453185
+    "timestamp": 1668453960
   }
 }

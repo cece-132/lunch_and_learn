@@ -4,17 +4,15 @@ class Country
               :place_id,
               :capital_name,
               :capital_long_lat
-    attr_accessor :place_id
 
   def initialize(data)
     @name = data[:name][:common]
     @lnglat = Geocoder.search(data[:name][:official]).first.coordinates
-    @capital_name = country_data.first[:capital].first
-    @capital_long_lat = longitude_first(country_data.first[:capitalInfo])
-    @place_id = nil
+    @capital_name = data[:capital].first
+    @capital_long_lat = longitude_first(data[:capitalInfo][:latlng])
   end
 
   def longitude_first(coordinates)
-    binding.pry
+    coordinates = [coordinates[1], coordinates[0]]
   end
 end
