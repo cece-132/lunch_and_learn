@@ -235,6 +235,8 @@
           null,
           1,
           1,
+          0,
+          0,
           null,
           null,
           null
@@ -245,8 +247,62 @@
           1,
           null
         ]
+      },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/app/facades/learning_resources_facade.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/app/services/youtube_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/app/poros/video.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1668530537
+    "timestamp": 1668535323
   }
 }
