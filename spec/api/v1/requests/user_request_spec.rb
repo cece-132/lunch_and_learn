@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Rspec.describe "Users Registration" do
+RSpec.describe "Users CRUD" do
   describe 'Create User' do
     it 'can create a user' do
 
@@ -12,7 +12,7 @@ Rspec.describe "Users Registration" do
                     )
       headers = {"CONTENT_TYPE" => "application/json"}
 
-      post "/api/v1/users", headers: headers, params: JSON.generate(item: user_params)
+      post "/api/v1/users", headers: headers, params: JSON.generate(user: user_params)
 
       expect(response).to be_successful
 
