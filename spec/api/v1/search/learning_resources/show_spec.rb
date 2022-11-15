@@ -5,7 +5,7 @@ RSpec.describe "Learning Resources", :vcr do
 
     describe 'learning resources per country' do
       it 'returns a video and photos ' do
-        get "/api/v1/learning_resources?country=thailand"
+        get "/api/v1/learning_resources?country=laos"
 
         expect(response).to be_successful
 
