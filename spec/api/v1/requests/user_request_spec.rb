@@ -26,9 +26,9 @@ RSpec.describe "Users CRUD" do
       expect(user[:data][:attributes]).to have_key(:name)
       expect(user[:data][:attributes]).to have_key(:email)
       expect(user[:data][:attributes]).to have_key(:api_key)
+
+      expect(User.all.count).to eq 1
     end
   end
 
 end
-
-#generates random letter and numbers rand(36**8).to_s(36)
