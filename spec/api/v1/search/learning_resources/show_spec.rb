@@ -14,39 +14,37 @@ RSpec.describe "Learning Resources", :vcr do
         expect(resources).to be_a Hash
         expect(resources).to have_key(:data)
         expect(resources[:data]).to be_a Hash
+
+        expect(resources[:data]).to have_key(:id)
+        expect(resources[:data][:id]).to be_nil
+
+        expect(resources[:data]).to have_key(:type)
+        expect(resources[:data][:type]).to be_a String
         
-        resources[:data].each do |resource|
-          expect(resource).to have_key(:id)
-          expect(resource[:id]).to be_nil
+        expect(resources[:data]).to have_key(:attributes) 
+        expect(resources[:data][:attributes]).to be_a Hash
+
+        expect(resources[:data][:attributes]).to have_key(:country)
+        expect(resources[:data][:attributes][:country]).to be_a String
+
+        expect(resources[:data][:attributes]).to have_key(:video)
+        expect(resources[:data][:attributes][:video]).to be_a Hash
+
+        expect(resources[:data][:attributes][:video]).to have_key(:title)
+        expect(resources[:data][:attributes][:video][:title]).to be_a String
+
+        expect(resources[:data][:attributes][:video]).to have_key(:youtube_video_id)
+        expect(resources[:data][:attributes][:video][:youtube_video_id]).to be_a String
+
+        expect(resources[:data][:attributes]).to have_key(:images)
+        expect(resources[:data][:attributes][:images]).to be_a Array
+
+        resources[:data][:attributes][:images].each do |image|
+          expect(image).to have_key(:alt_tag)
+          expect(image[:alt_tag]).to be_a String
           
-          expect(resource).to have_key(:type)
-          expect(resource[:type]).to be_a String
-
-          expect(resource).to have_key(:attributes) 
-          expect(resource[:attributes]).to be_a Hash
-
-          expect(resource[:attributes]).to have_key(:country)
-          expect(resource[:attributes][:country]).to be_a String
-
-          expect(resource[:attributes]).to have_key(:video)
-          expect(resource[:attributes][:video]).to be_a Hash
-
-          expect(resource[:attributes][:video]).to have_key(:title)
-          expect(resource[:attributes][:video][:title]).to be_a String
-
-          expect(resource[:attributes][:video]).to have_key(:youtube_video_id)
-          expect(resource[:attributes][:video][:youtube_video_id]).to be_a String
-
-          expect(resource[:attributes]).to have_key(:images)
-          expect(resource[:attributes][:images]).to be_a Array
-          
-          resource[:attributes][:images].each do |image| 
-            expect(image).to have_key(:alt_tag)
-            expect(image[:alt_tag]).to be_a String
-            
-            expect(image).to have_key(:url)
-            expect(image[:url]).to be_a String
-          end
+          expect(image).to have_key(:url)
+          expect(image[:url]).to be_a String
         end
 
       end

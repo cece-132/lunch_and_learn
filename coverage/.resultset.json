@@ -235,8 +235,7 @@
           null,
           1,
           1,
-          0,
-          0,
+          1,
           null,
           null,
           null
@@ -256,6 +255,18 @@
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          10,
+          null,
           null,
           null,
           null
@@ -301,8 +312,87 @@
           null,
           null
         ]
+      },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/app/services/flickr_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/app/poros/photo.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          10,
+          10,
+          null,
+          null,
+          1,
+          10,
+          1,
+          null,
+          9,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/tanjiro/Desktop/Ruby_Learning/3Mod/projects/lunch-and-learn/app/serializers/learning_resources_serializer.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          10,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1668535323
+    "timestamp": 1668544515
   }
 }
