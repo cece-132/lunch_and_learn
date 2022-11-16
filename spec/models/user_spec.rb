@@ -10,7 +10,13 @@ RSpec.describe User, type: :model do
 
   describe 'instance methods' do
     describe '#favorites' do
-      it 'returns a users favorites'
+      it 'returns a users favorites' do
+        user = create(:user)
+        favorites = create_list(:favorite, 5, api_key: user.api_key)
+
+        expect(user.favorites.count).to eq 5
+        expect(user.favorites).to eq(favorites)
+      end
     end
   end
 end
