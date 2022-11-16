@@ -26,4 +26,29 @@ RSpec.describe 'Favorites', :vcr do
     end
   end
 
+  describe 'Sad Path' do
+    it 'return 401 status if api_key missing' do
+      user = create(:user)
+      get "/api/v1/recipes?country=french"
+
+      headers = {"CONTENT_TYPE" => "application/json"}
+
+      recipe = JSON.parse(response.body, symbolize_names: true)[:data].first
+
+      favorite_params = {
+                        # "api_key": user.api_key,
+                        "country": recipe[:attributes][:country],
+                        "recipe_link": recipe[:attributes][:url],
+                        "recipe_title": recipe[:attributes][:title]
+                        }
+
+      post "/api/v1/favorites", headers: headers, params: JSON.generate(favorite: favorite_params)
+
+      favorite = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response.status).to eq 404
+      expect(favorite).to eq({ error: 'Unsuccessful Favorite Creation' })
+    end
+  end
+
 end
