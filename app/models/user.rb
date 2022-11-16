@@ -11,7 +11,7 @@ class User < ApplicationRecord
   before_validation :assign_api_key
 
   def favorites
-    binding.pry
+    Favorite.where(api_key: self.api_key)
   end
 
   private

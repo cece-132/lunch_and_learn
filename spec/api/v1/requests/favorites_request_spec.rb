@@ -52,7 +52,7 @@ RSpec.describe 'Favorites', :vcr do
   end
 
   describe 'Viewing a users favorites' do
-    xit 'returns all of a users favorites' do
+    it 'returns all of a users favorites' do
       user = create(:user)
       favorite = create_list(:favorite, 10, api_key: user.api_key)
 
