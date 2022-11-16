@@ -19,9 +19,10 @@ RSpec.describe 'Favorites', :vcr do
 
       post "/api/v1/favorites", headers: headers, params: JSON.generate(favorite: favorite_params)
 
-      expect(response.status).to eq 201
-      expect(response).to eq({ "success": "Favorite added successfully" })
+      favorite = JSON.parse(response.body, symbolize_names: true)
 
+      expect(response.status).to eq 201
+      expect(favorite).to eq({ "success": "Favorite added successfully" })
     end
   end
 

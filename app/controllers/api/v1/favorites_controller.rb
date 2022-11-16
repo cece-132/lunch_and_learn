@@ -3,7 +3,7 @@ class Api::V1::FavoritesController < ApplicationController
   def create
     favorite = Favorite.new(favorite_params)
     if favorite.save
-      render json: { success: "Favorite added successfully" }
+      render json: { success: "Favorite added successfully" }, status: 201
     else
       render json: { error: 'Unsuccessful Favorite Creation' }, status: 404
     end
