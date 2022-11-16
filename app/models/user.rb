@@ -6,7 +6,13 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :api_key, uniqueness: true
 
+  self.primary_key = 'api_key'
+
   before_validation :assign_api_key
+
+  def favorites
+    Favorite.where(api_key: self.api_key)
+  end
 
   private
     def assign_api_key

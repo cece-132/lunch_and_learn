@@ -10,14 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_15_222052) do
+ActiveRecord::Schema.define(version: 2022_11_16_132352) do
 
-  create_table "users", force: :cascade do |t|
+  create_table "favorites", force: :cascade do |t|
+    t.string "api_key"
+    t.string "country"
+    t.string "recipe_link"
+    t.string "recipe_title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", id: false, force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "api_key"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["api_key"], name: "index_users_on_api_key", unique: true
   end
 
 end
