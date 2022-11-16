@@ -9,6 +9,16 @@ class Api::V1::FavoritesController < ApplicationController
     end
   end
 
+  def show
+    if User.exists?(params[:id])
+      user = User.find(params[:id])
+      favorites = user.favorites
+      render json: FavoriteSerializer.format_favorites(favorites), status: 201
+    else
+      render json: { error: 'User Does Not Exist' }, status: 404
+    end
+  end
+
   private
 
   def favorite_params

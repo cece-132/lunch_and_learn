@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resources :recipes, only: [:index]
       resources :learning_resources, only: [:index]
       resources :users
-      resources :favorites, only: [:create]
+      resources :favorites, only: [:create, :show]
     end
   end
 end

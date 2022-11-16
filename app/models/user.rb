@@ -10,6 +10,10 @@ class User < ApplicationRecord
 
   before_validation :assign_api_key
 
+  def favorites
+    binding.pry
+  end
+
   private
     def assign_api_key
       if api_key.nil?
