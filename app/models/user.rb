@@ -6,6 +6,8 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :api_key, uniqueness: true
 
+  self.primary_key = 'api_key'
+
   before_validation :assign_api_key
 
   private
